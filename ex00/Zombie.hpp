@@ -2,7 +2,6 @@
 # define ZOMBIE_H
 
 # include <iostream>
-# include <iomanip>
 # include <string>
 
 # define BLK "\e[0;30m"
@@ -59,13 +58,14 @@ namespace ANSI {
 
 class Zombie {
 	private:
-		std::string name;
+		std::string _name;
 	public:
-		Zombie();
+		Zombie( std::string name );
 		~Zombie();
 		void announce( void );
-		Zombie* newZombie( std::string name );
-		void randomChump( std::string name );
 };
+
+Zombie* newZombie( std::string name );
+void randomChump( std::string name );
 
 #endif

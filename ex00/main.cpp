@@ -1,8 +1,10 @@
 #include "Zombie.hpp"
 
 int	main() {
-	Zombie Zombie;
+	Zombie* Zombie = newZombie("Tatar");
+	Zombie->announce();
+	delete Zombie;
+	std::cout << std::endl;
 
-	Zombie.newZombie("Tatar");
-	Zombie.announce();
+	randomChump("Tar");
 }

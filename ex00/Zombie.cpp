@@ -1,13 +1,14 @@
 #include "Zombie.hpp"
 
-Zombie::Zombie() {
-	std::cout << MAG << "Zombie is born (｡⨱ω⨱)づ" << std::endl;
+Zombie::Zombie( std::string name ) {
+	this->_name = name;
+	std::cout << GRN << this->_name << RED << " --> " << MAG << "has just been born (｡⨱ω⨱)づ" << std::endl;
 }
 
 Zombie::~Zombie() {
-	std::cout << RED << "DIED ⤜(*⏠*)⤏" << std::endl;
+	std::cout << GRN << this->_name << RED << " --> " << MAG << "DIED ⤜(*⏠*)⤏" << std::endl;
 }
 
 void Zombie::announce() {
-	std::cout << this->name << CYN << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << GRN << this->_name << RED << " --> " << MAG << "BraiiiiiiinnnzzzZ..." << std::endl;
 }
