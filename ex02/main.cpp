@@ -10,7 +10,7 @@ int main() {
 	std::string& stringREF = brain;
 
 	std::cout << BLU << "The memory address of the string variable = " << &brain << std::endl;
-	std::cout << BLU << "The memory address held by stringPTR      = " << stringPTR << std::endl;
+	std::cout << BLU << "The memory address held by stringPTR      = " << &stringPTR << std::endl;
 	std::cout << BLU << "The memory address held by stringREF      = " << &stringREF << std::endl;
 
 	std::cout << std::endl;
