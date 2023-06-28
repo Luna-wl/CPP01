@@ -14,7 +14,7 @@ void replaceStr( std::string &str, std::string s1, std::string s2 ) {
 }
 
 int main( int ac, char **av) {
-	
+
 	std::ifstream in;
 	std::ofstream out;
 	std::string s1 = av[2], s2 = av[3];
@@ -24,14 +24,14 @@ int main( int ac, char **av) {
 		return (0);
 	}
 	// open infile
-	in.open(av[1]);
+	in.open(av[1], std::fstream::in);
 	if (!in) {
 		std::cout << RED << "Error to open file" << std::endl;
 		return (0);
 	}
 	// open replacefile
 	std::string replaceFile = (std::string)av[1] + ".replace";
-	out.open(replaceFile);
+	out.open(replaceFile, std::fstream::in);
 	if (!out) {
 		std::cout << RED << "Error to open replace file" << std::endl;
 		in.close();
